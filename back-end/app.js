@@ -77,6 +77,15 @@ app.post('/messages/save', async (req, res) => {
     })
   }
 })
+// a route to handle the AboutUs page
+app.get('/about-us', async(req, res) => {
+  return res.json({
+    description: 
+    // not sure if I need to space this out or not, looks janky in vscode
+      'Hey, I\'m coherency1. I have included a link to my profile picture below. I am a student at NYU and my major is Data Science. I have not done much frontend coding but I have a good amount of experience in back-end and databases. Hopefully I can catch up on both and understand the workflow of both sides better.',
+      imageUrl: 'https://avatars.githubusercontent.com/u/95164109?v=4',
+  })
+}) 
 
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
